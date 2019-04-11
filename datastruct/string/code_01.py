@@ -6,10 +6,17 @@
 """
 
 
-def naive_match(s, p):
-    m = len(s)
-    n = len(p)
+def naive_match(source, target):
+    m = len(source)
+    n = len(target)
     for i in range(m-n+1):
-        if s[i:i+n] == p:
+        if source[i:i+n] == target:
             return True
     return False
+    # if target in source:
+    #     return True
+    # else:
+    #     return False
+
+
+print(naive_match('abcdefghijk', 'cdefg'))
